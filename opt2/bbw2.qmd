@@ -1,0 +1,35 @@
+---
+title: "Part 2"
+---
+
+```{r, child="../child/data_design.qmd"}
+
+```
+
+```{r}
+source("../scripts/revision_script.R")
+```
+
+## Output
+
+```{r}
+cat("Model 1: Productivity predicted by coffee consumption")
+summary(model1)
+
+cat("\n\nModel 2: Productivity predicted by coffee consumption and wellbeing")
+summary(model2)
+```
+
+## Tasks
+
+```{r, child="../child/p2_tasks.qmd"}
+
+```
+
+ 
+
+::: callout-note
+Make sure to take note of your answers! You will need them for the Kahoot! at the end of this section.
+:::
+
+<a href="https://and-revision.netlify.app/opt2/wyg2"><button class="button">« Previous Section</button></a> <a href="https://and-revision.netlify.app/opt2/bypgg2"><button class="button right">Next Section »</button></a>

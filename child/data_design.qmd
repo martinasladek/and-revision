@@ -1,0 +1,9 @@
+## Data and Design {#data-and-design}
+
+This study is interested in the variables that predict daily productivity \[`productivity`\]. The output in each part explores the effect of the following variables:
+
+-   `coffee`: Number of cups of coffee consumed
+-   `wellbeing`: Rating of the wellbeing of each worker, from -10 (awful) to 10 (brilliant)
+-   `ai_use`: Rating of the frequency of use of AI, from 0 (none at all) to 10 (constant)
+
+*Note*: All data were generated randomly.

@@ -1,0 +1,62 @@
+---
+title: "Part 3: The Vault"
+---
+
+```{r}
+source("../scripts/revision_script.R")
+```
+
+::: callout-tip
+## Message from Command
+
+Good and bad news, team. The good news is that we found the crash site thanks to your help. Inside, we recovered a large, securely locked vault. Our new alien friends were very excited by this progress, but quickly became agitated.
+
+We finally managed to get them to tell us the problem, and that's the bad news: productivity on their planet is being enforced by an out-of-control AI that is determined to prevent them improving their society any further. The vault contains access keys to the AI mainframe, which were sent to our planet to hide them away.
+
+Which brings me to the worse news. The aliens tell us the AI has detected the signal from the access keys and has launched an invasion force to recover them. The first drones are only minutes away from entering our atmosphere! We have to ask you for your help once again: we must open the vault and retrieve the keys before the AI arrives, so we can deactivate it once and for all.
+
+Humanity's continued existence rests in your hands! Good luck.
+:::
+
+## Output
+
+Documentation retrieved from the crash site, believed to contain coded clues to the vault combination.
+
+Predictor 1: `coffee`
+
+Predictor 2: `wellbeing`
+
+Predictor 3: `use_ai`
+
+```{r}
+cat("Model 3: Productivity predicted by coffee consumption, wellbeing, and AI use")
+
+summary(model3)
+```
+
+```{r}
+cat("\n\nModel 2 vs Model 3 comparison")
+
+m2m3_aov
+```
+
+```{r}
+cat("\n\n Standardised Bs")
+parameters::model_parameters(model3, standardize = "refit")
+```
+
+## Tasks
+
+```{r, child="../child/p3_tasks.qmd"}
+
+```
+
+## Vault Lock
+
+The vault lock combination consists of three numbers:
+
+1.  The first is the number of the better model (2 or 3).
+2.  The second is the number of the predictor that is NOT significant.
+3.  The third is the number of the predictor that has the biggest impact on the outcome.
+
+When you have the combination, put it into the vault lock to retrieve the keys!

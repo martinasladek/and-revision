@@ -1,0 +1,7 @@
+Use the output above to answer the following questions.
+
+1.  For every unit increase in coffee consumed, what is the increase in predicted productivity? What can you conclude about the relationship between coffee and productivity based on this information?
+
+2.  What is the equation of the line for this model?
+
+3.  What productivity score does the model predict for someone that consumes 8 cups of coffee a day? Make sure you use *b*s rounded to 2 decimal places, and round your answer as well.

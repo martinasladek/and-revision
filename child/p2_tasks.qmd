@@ -1,0 +1,5 @@
+Use the output above to answer the following questions.
+
+1.  How much variance in the outcome does each model explain? How much *more* variance does the second model explain compared to the first? Give your answers as percentages.
+2.  Assuming the sampling distribution of *b* is normal, calculate the confidence intervals for the *b*s in the second model. How can you interpret these CIs?
+3.  Which of these two models, if any, is a significant improvement over the null model? How do you know?

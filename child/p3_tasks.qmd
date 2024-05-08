@@ -1,0 +1,5 @@
+Use the output above to answer the following questions.
+
+1.  Which is the better model, the second or third? In other words, is the third model (with three predictors) a significant improvement over the second model (with two predictors)?
+2.  Which predictor(s) in the better model are significant and which ones aren’t?
+3.  Which predictor in the better model has the biggest impact on the outcome?

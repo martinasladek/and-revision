@@ -1,0 +1,75 @@
+---
+title: "Part 2: The Ship"
+---
+
+::: callout-tip
+## Message from Command
+
+Great work, team! We've established contact thanks to your efforts.
+
+The situation is more dire than we expected. It seems an alien ship crash-landed on Earth recently, with crucial information aboard. From what we can gather, the aliens are trying to improve their coffee-based society, and the ship contained highly sensitive research on this topic that they want to recover. But why was that information sent away in the first place...?
+
+We've collected a map of all of the locations of recent reported UFO sightings. The aliens have also provided us with the last known location of their ship, but it's been encrypted in yet more linear models! We are asking you again for your help to find the ship and help our new extraterrestrial allies.
+:::
+
+```{r}
+source("../scripts/revision_script.R")
+```
+
+## Output
+
+```{r}
+cat("Model 1: Productivity predicted by coffee consumption")
+summary(model1)
+
+cat("\n\nModel 2: Productivity predicted by coffee consumption and wellbeing")
+summary(model2)
+```
+
+## Tasks
+
+```{r, child="../child/p2_tasks.qmd"}
+
+```
+
+Once you have the answers, use them to find the latitude and longitude of the crashed ship and enter them in the map below. Make sure you round your answers to two decimal places!
+
+```{r}
+#| include: false
+
+make_vec <- function(x){
+  as.numeric(strsplit(as.character(x), "")[[1]]) |> na.omit()
+}
+
+ans1 <- round(summary(model2)$r.squared*100, 2) |> make_vec()
+
+ans2.1 <- round(round(summary(model2)$coefficients[2], 2) + 1.96*round(summary(model2)$coefficients[2,2], 2), 2)  |> make_vec()
+
+ans2.2 <- round(round(summary(model2)$coefficients[3], 2) - 1.96*round(summary(model2)$coefficients[3,2], 2), 2) |> make_vec()
+
+ans3 <- 2
+
+
+lat <- paste0(ans3, ans2.1[2]) |> as.numeric()
+lng <- paste0(ans1[3], ans2.2[2]) |> as.numeric()
+
+c(lat, lng)
+```
+
+## Find the Ship
+
+### Latitude
+
+-   The first number is the answer to task 3.
+-   The second number is the second digit of the upper bound from the coffee predictor from task 2.
+
+### Longitude
+
+-   The first number is the third digit of the difference in R^2^ between the two models from task 1.
+-   The third number is the second digit of the lower bound from the wellbeing predictor from task 2.
+
+When you have found the ship, click on the marker to proceed.
+
+```{=html}
+<iframe width="100%" height="1000" src="https://drmankin.shinyapps.io/trackr/"></iframe>
+```

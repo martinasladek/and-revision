@@ -1,0 +1,39 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: monospace;
+
+// Base document colours
+$body-bg: #122116;
+$body-color: #27c44f;
+$link-color: #2cf25e;
+$navbar-bg: #030503;
+$code-color: shift-color($body-color, -20%);
+$code-bg: $navbar-bg;
+
+// buttons
+
+.button {
+  transition-duration: 0.4s;
+  padding: 14px 40px;
+  color: $body-color;
+  border-color: $body-color;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: $body-color;
+  color: $body-bg;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    margin: 0 auto; /* Center the button */
+}

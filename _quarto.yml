@@ -1,0 +1,33 @@
+project:
+  type: website
+  render: 
+    - "*.qmd"
+    - "!child/" # don't attempt to render child docs
+
+website:
+  title: "FiRst Contact"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: opt1/wyg1.qmd
+        text: "Option 1"
+      - href: opt2/wyg2.qmd
+        text: "Option 2"
+      - href: opt3/wyg3.qmd
+        text: "Option 3"
+
+format:
+  html:
+    theme:
+      light: [flatly, flatly.scss]
+      dark: [darkly, oldtimey.scss]
+    css: styles.css
+    toc: true
+    execute:
+      echo: false
+      message: false
+      warning: false
+
+editor: visual
+

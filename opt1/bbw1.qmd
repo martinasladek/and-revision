@@ -1,0 +1,31 @@
+---
+title: "Part 2"
+---
+
+```{r, child="../child/data_design.qmd"}
+
+```
+
+```{r}
+source("../scripts/revision_script.R")
+```
+
+## Output
+
+```{r}
+cat("Model 1: Productivity predicted by coffee consumption")
+summary(model1)
+
+cat("\n\nModel 2: Productivity predicted by coffee consumption and wellbeing")
+summary(model2)
+```
+
+## Tasks
+
+```{r, child="../child/p2_tasks.qmd"}
+
+```
+
+ 
+
+<a href="https://and-revision.netlify.app/opt1/wyg1"><button class="button">« Previous Section</button></a> <a href="https://and-revision.netlify.app/opt1/bypgg1"><button class="button right">Next Section »</button></a>

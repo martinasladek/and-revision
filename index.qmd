@@ -1,0 +1,19 @@
+---
+title: "Welcome!"
+---
+
+Welcome to the Analysing Data revision website! This site provides the materials for our revision sessions to help you prepare for the Analysing Data exam.
+
+There are three different sessions in the revision session. They all cover the same content, just in different ways. Your session lead will tell you which of the options you have been allocated to. Select the correct option using the buttons below, or the navigation bar above.
+
+<!-- <a href="https://and-revision.netlify.app/opt1/wyg1"><button class="button">Option 1</button></a> -->
+
+<!-- <a href="https://and-revision.netlify.app/opt2/wyg2"><button class="button middle" style="float: center;">Option 2</button></a> -->
+
+<!-- <a href="https://and-revision.netlify.app/opt3/wyg3"><button class="button right">Option 3</button></a> -->
+
+
+
+::: button-container
+<a href="https://and-revision.netlify.app/opt1/wyg1" class="button left">Option 1</a> <a href="https://and-revision.netlify.app/opt2/wyg2" class="button center">Option 2</a> <a href="https://and-revision.netlify.app/opt3/wyg3" class="button right">Option 3</a>
+:::

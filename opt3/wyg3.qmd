@@ -1,0 +1,77 @@
+---
+title: "Part 1: The Transmission"
+# include-in-header: 
+#   text: <script type="text/javascript" src="p1_check.js"></script>
+---
+
+```{r}
+source("../scripts/revision_script.R")
+```
+
+```{=html}
+<script>
+var correctAnswer1 = 69.42;
+var correctAnswer2 = "BDAC";
+
+function checkAnswers() {
+    var answer1 = parseFloat(document.getElementById("answer1").value); // Convert input to number
+    var answer2 = document.getElementById("answer2").value;
+    
+    if (answer1 === correctAnswer1 && answer2 === correctAnswer2) {
+        // Link to another page
+        window.location.href="https://and-revision.netlify.app/opt3/bww3";
+    } else {
+        // Show error message
+        alert('No response. Check calculations and try again.');
+    }
+}
+</script>
+```
+::: callout-tip
+## Message from Command
+
+Thank you for contributing your expertise to the cause of first contact!
+
+We have received an encrypted transmission from the aliens, and the following output. It takes the form of statistical information, apparently about factors influencing productivity. We suspect the aliens may have an entirely coffee-based society!
+
+Our diplomatic experts believe this is some kind of test. To establish communication, we need you to solve these questions to send the right message on the right channel.
+
+Humanity's future rests in your hands! Good luck.
+:::
+
+## Output
+
+```{r}
+cat("Model 1: Productivity predicted by coffee consumption")
+model1
+```
+
+## Response
+
+### Transmission Frequency
+
+First, to determine the **transmission frequency** to use to send the response to the aliens, answer the following questions:
+
+1.  For every unit increase in coffee consumed, what is the increase in predicted productivity? What can you conclude about the relationship between coffee and productivity based on this information?
+
+2.  What is the equation of the line for this model?
+
+3.  What productivity score does the model predict for someone that consumes 8 cups of coffee a day? Make sure you use *b*s rounded to 2 decimal places, and round your answer as well.
+
+The transmission frequency is the answer to question (3).
+
+### Code
+
+Match up the equation of the line to the corresponding scatterplots below. The **code to send** will take the form of a four-letter code of the matched-up scatterplots in order from 1 to 4.
+
+```{r}
+lm_mat
+```
+
+`r paste0("_____ ", 1:4, ". y~i~ = ", round(mods_sum$b0, 2)," + ", round(mods_sum$b1, 2), "x~i~ + e~i~", sep = "\n\n", collapse = "")`
+
+## Transmission
+
+To respond to the alien transmission, enter the following:
+
+<label for="answer1">Transmission Frequency:</label> <input type="text" id="answer1" style="color: grey;"> Hz <br><br> <label for="answer2">Code to Send:</label> <input type="text" id="answer2" style="color: grey;"> <br><br> <button onclick="checkAnswers()" class="button">Send Transmission!</button>
